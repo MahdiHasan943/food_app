@@ -24,7 +24,7 @@ const Header = () => {
       
         {
           navlinks.map(nav => (
-              <li onClick={navToggle} key={nav?.id}><button className={stickyClass?' text-[#fff]  px-8':'px-8 tablet:text-primaryDark text-[#fff] '}>{nav.title}</button></li>
+              <li onClick={navToggle} key={nav?.id}><button className={'px-8 tablet:text-primaryDark text-[#fff] '}>{nav.title}</button></li>
         ))
         }
     </React.Fragment>

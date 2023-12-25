@@ -44,9 +44,6 @@
     display: block;
     cursor: pointer;
   }
-  .itemD {
-    margin-top: 10px;
-  }
   .nav__menu {
     position: fixed;
     top: 0;
@@ -99,7 +96,7 @@
   background: #FC8A06;
   z-index: 9999999999999!important;
   position: sticky;
-  animation: fadeInDown 1s ease-in-out forwards; /* Adjusted animation properties */
+  -webkit-animation: fadeInDown 1s ease-in-out forwards; /* Adjusted animation properties */
 }
 
 @keyframes fadeInDown {
