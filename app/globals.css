@@ -2,26 +2,114 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* header  start*/
+.menu_img {
+  display: none;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+}
+.nav__toggler {
+  display: none;
+}
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-around;
+}
+.menu_image {
+  display: none;
+}
+@media screen and (max-width: 669px) {
+  .nav {
+    display: flex;
+    position: relative;
+  }
+  .menu_image {
+    display: block;
+  }
+  .nav__toggler div {
+    width: 1.7rem;
+    height: 2px;
+    margin: 0.4rem;
+    background: #FC8A06;
+    transition: 0.2s ease-in;
+  }
+  .nav__toggler {
+    display: block;
+    cursor: pointer;
+  }
+  .itemD {
+    margin-top: 10px;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100vw;
+    background: #FC8A06;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px;
+    gap: 30px;
+    transform: translateX(100%) !important;
+    transition: 0.2s ease-in;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Active Class */
+.nav__active {
+  transform: translateX(0%) !important;
 }
+/* Toggle Icon Animation */
+.toggle div {
+  width: 2.5rem;
+  height: 0.1rem;
+  margin: 0.4rem;
+  background: #fff;
+  transition: 0.2s ease-in;
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 5px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -5px);
+}
+.nav1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  z-index: 99999999999999999!important;
+  width: 100%;
+  position: sticky;
+}
+.nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #FC8A06;
+  z-index: 9999999999999!important;
+  position: sticky;
+  animation: fadeInDown 1s ease-in-out forwards; /* Adjusted animation properties */
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%); /* Adjusted the translation */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* header end */
