@@ -37,7 +37,7 @@
     width: 1.7rem;
     height: 2px;
     margin: 0.4rem;
-    background: #FC8A06;
+    background: gainsboro;
     transition: 0.2s ease-in;
   }
   .nav__toggler {

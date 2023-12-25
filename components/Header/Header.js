@@ -10,6 +10,8 @@ const Header = () => {
 // for hambar and menu_drawer.
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
+  console.log(icon,active);
+
   const navToggle = () => {
     if (active === "nav__menu") {
       setActive("nav__menu nav__active");
@@ -44,7 +46,7 @@ const Header = () => {
       </div>
       {/* for hamburger menu icon */}
       <div onClick={navToggle} className={icon}>
-        <div className="line1"></div>
+        <div className={ 'line1'}></div>
         <div className="line2"></div>
         <div className="line3"></div>
       </div>
