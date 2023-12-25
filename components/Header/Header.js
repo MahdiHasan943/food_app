@@ -31,7 +31,7 @@ const Header = () => {
   );
 
   return (
-    <nav  className={`${stickyClass} sm:px-10  xl:px-16 px-4 py-7 shadow-none w-[100vw] nav1`}
+    <nav  className={`overflow-hidden ${stickyClass} sm:px-10  xl:px-16 px-4 py-7 shadow-none w-[100vw] nav1`}
     >
       <div className={`flex w-full items-center   justify-between largeMonitor:justify-between largeMonitor:px-20 largestMonitor:px-[150px] `}>
         <div className="flex justify-start    items-center">
