@@ -37,7 +37,6 @@
     width: 1.7rem;
     height: 2px;
     margin: 0.4rem;
-    background: #FC8A06;
     transition: 0.2s ease-in;
   }
   .nav__toggler {
@@ -96,7 +95,8 @@
   background: #FC8A06;
   z-index: 9999999999999!important;
   position: sticky;
-  -webkit-animation: fadeInDown 1s ease-in-out forwards; /* Adjusted animation properties */
+animation: fadeInDown 1s ease-in-out  normal none running;
+
 }
 
 @keyframes fadeInDown {

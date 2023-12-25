@@ -6,8 +6,21 @@ import { navlinks } from "@/front_utils/info";
 import useStickyNav from "@/front_utils/useStickyNav";
 const Header = () => { 
 //for FadeIn when scroll.
-  const stickyClass = useStickyNav();
-// for hambar and menu_drawer.
+const [stickyClass, setStickyClass] = useState("");
+
+useEffect(() => {
+  const handleScroll = () => {
+    let windowHeight = window.scrollY;
+    setStickyClass(windowHeight > 150 ? "nav" : "");
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  // Cleanup the event listener when the component unmounts
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);// for hambar and menu_drawer.
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
   const navToggle = () => {
@@ -44,9 +57,9 @@ const Header = () => {
       </div>
       {/* for hamburger menu icon */}
       <div onClick={navToggle} className={icon}>
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
+        <div className={stickyClass?'bg-[#fff]':'bg-[#FC8A06] line1'}></div>
+        <div className={stickyClass?'bg-[#fff]':'bg-[#FC8A06] line2'}></div>
+        <div className={stickyClass?'bg-[#fff]':'bg-[#FC8A06] line3'}></div>
       </div>
     </nav>
   )
