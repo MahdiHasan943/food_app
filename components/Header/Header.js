@@ -9,18 +9,18 @@ const Header = () => {
 const [stickyClass, setStickyClass] = useState("");
 
 useEffect(() => {
-  const handleScroll = () => {
+  window.addEventListener('scroll', stickNavbar);
+  return () => window.removeEventListener('scroll', stickNavbar);
+}, []);
+
+const stickNavbar = () => {
+  if (window !== undefined) {
     let windowHeight = window.scrollY;
-    setStickyClass(windowHeight > 150 ? "nav" : "");
-  };
-
-  window.addEventListener("scroll", handleScroll);
-
-  // Cleanup the event listener when the component unmounts
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, []);// for hambar and menu_drawer.
+    // window height changed for the demo
+    windowHeight > 150 ? setStickyClass('nav') : setStickyClass('');
+  }
+};
+  // for hambar and menu_drawer.
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
   const navToggle = () => {
