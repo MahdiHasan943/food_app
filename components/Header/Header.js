@@ -7,6 +7,7 @@ import useStickyNav from "@/front_utils/useStickyNav";
 const Header = () => { 
 //for FadeIn when scroll.
   const stickyClass = useStickyNav();
+  const [navActive,setNavActive]=useState(false)
 // for hambar and menu_drawer.
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
@@ -26,9 +27,17 @@ const Header = () => {
       
         {
           navlinks.map(nav => (
-              <li onClick={navToggle} key={nav?.id}><button className={stickyClass?' text-[#fff]  px-8':'px-8 tablet:text-primaryDark text-[#fff] '}>{nav.title}</button></li>
+            <li onClick={() => {
+              navToggle();
+              setNavActive(nav?.href);               
+            }} key={nav?.id}><button className={stickyClass ? ` text-[#fff]  px-8 ${navActive===nav?.href?'border border-[#fff]':''}` : `${navActive===nav?.href?'bg-[#FC8A06] text-[#fff]':'tablet:text-primaryDark text-[#fff]'} px-8  `}>{nav.title}</button></li>
         ))
-        }
+      }
+      <li>
+        <Image src={stickyClass?"/images/addToCart.png":'/images/addToCartd.png'} alt="cart" width={50} height={50}/>
+      </li>
+
+
     </React.Fragment>
   );
 
@@ -42,6 +51,7 @@ const Header = () => {
         <ul className={`${active} `}>
         <Link  className="menu_image" href={'/'}><Image  src={'/images/LOGO.png'} width={100} height={100} alt="savor logo" /></Link>
           {menu}
+   
         </ul>
       </div>
       {/* for hamburger menu icon */}

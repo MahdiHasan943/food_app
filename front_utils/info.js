@@ -1,7 +1,7 @@
 export const navlinks = [
     {
          "id":1,
-        "title": "Menu",
+        "title": "Browse Menu ",
          "href":"menu"
     },
     {

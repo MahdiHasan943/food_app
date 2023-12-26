@@ -35,9 +35,9 @@
   }
   .nav__toggler div {
     width: 1.7rem;
-    height: 2px;
+    height: 3px;
     margin: 0.4rem;
-    background: gainsboro;
+    background: rgb(208, 207, 207);
     transition: 0.2s ease-in;
   }
   .nav__toggler {
