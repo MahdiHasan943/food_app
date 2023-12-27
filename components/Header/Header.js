@@ -30,7 +30,7 @@ const Header = () => {
             <li onClick={() => {
               navToggle();
               setNavActive(nav?.href);               
-            }} key={nav?.id}><button className={stickyClass ? ` text-[#fff]  px-8 ${navActive===nav?.href?'border border-[#fff]':''}` : `${navActive===nav?.href?'bg-[#FC8A06] text-[#fff]':'tablet:text-primaryDark text-[#fff]'} px-8  `}>{nav.title}</button></li>
+            }} key={nav?.id}><button className={stickyClass ? ` text-[#fff]  px-8 ${navActive===nav?.href?'border border-[#fff] py-3 px-8 rounded-md':''}` : `${navActive===nav?.href?'bg-[#FC8A06] border border-[#fff] tablet:border-0  py-3 px-8 rounded-md text-[#fff]':'tablet:text-primaryDark text-[#fff]'} px-8  `}>{nav.title}</button></li>
         ))
       }
       <li>

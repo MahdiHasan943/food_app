@@ -7,7 +7,7 @@ const useStickyNav = () => {
   useEffect(() => {
     const handleScroll = () => {
       let windowHeight = window.scrollY;
-      setStickyClass(windowHeight > 150 ? "nav" : "");
+      setStickyClass(windowHeight > 100 ? "nav" : "");
     };
 
     window.addEventListener("scroll", handleScroll);

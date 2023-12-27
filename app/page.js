@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className='px-4 tablet:px-16'>
+    <main className='largeMonitor:px-20 largestMonitor:px-[150px]'>
       {/* hero */}
       <section>
            <Hero/>
