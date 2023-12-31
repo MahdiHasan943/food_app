@@ -2,6 +2,7 @@ import { Lato } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
+import TopBtn from '@/front_utils/GoTotop'
 
 const lato = Lato({
   weight: '400',
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <body className={`${lato.className}`}>
         <Header/>
         {children}
+      <TopBtn/>
       <Footer/>
       </body>
     </html>
