@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero/Hero'
+import Exclusive from '@/components/exclusive/Exclusive'
 import Image from 'next/image'
 
 export default function Home() {
@@ -6,7 +7,8 @@ export default function Home() {
     <main className='largeMonitor:px-20 largestMonitor:px-[150px]'>
       {/* hero */}
       <section>
-           <Hero/>
+        <Hero />
+        <Exclusive/>
       </section>
       {/* others */}
       <section>
