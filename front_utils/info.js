@@ -92,3 +92,28 @@ export const plates = [
         "img":"/images/plate2.png",
     },
 ]
+
+export const logos = [
+    {
+        "image":"/images/popular1.png"
+    },
+    {
+        "image":"/images/popular2.png"
+    }
+    ,
+    {
+        "image":"/images/popular3.png"
+    }
+    ,
+    {
+        "image":"/images/popular4.png"
+    }
+    ,
+    {
+        "image":"/images/popular5.png"
+    }
+    ,
+    {
+        "image":"/images/popular6.png"
+    }
+]

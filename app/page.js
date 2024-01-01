@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero/Hero'
 import Exclusive from '@/components/exclusive/Exclusive'
 import Plates from '@/components/plates/Plates'
+import Poplar from '@/components/popular/Poplar'
 import Image from 'next/image'
 
 export default function Home() {
@@ -13,7 +14,8 @@ export default function Home() {
       </section>
       {/* categories & others */}
       <section className='max-w-[2400px] mx-auto'>
-          <Plates/>
+        <Plates />
+        <Poplar/>
       </section>
 </main>
   )
