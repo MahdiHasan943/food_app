@@ -5,6 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+
 import { exclusive } from "@/front_utils/info";
 import Image from "next/image";
 
@@ -29,6 +32,12 @@ const Exclusive = () => {
       <Swiper
         ref={swiperRef}
         watchSlidesProgress={true}
+        pagination={{
+          dynamicBullets: true,
+          clickable: true,
+
+        }}
+        modules={[Pagination]}
         slidesPerView={3}
         className="mySwiper"
         breakpoints={breakpoints}
@@ -41,7 +50,7 @@ const Exclusive = () => {
                 alt={content.title}
                 width={400}
                 height={400}
-                className=" rounded-lg "
+                className=" rounded-lg largestMonitor:w-[600px] "
               />
               <p className="absolute top-0 right-[20px] bg-[#000] text-[#fff] px-4 rounded-md py-2">{content.offer}</p>
               <div className={content.id===2? 'absolute bottom-0  duration-200 delay-75 ease-linear  left-0 px-8 py-4':` absolute bottom-[-100px] group-hover:bottom-0  duration-200 delay-75 ease-linear  left-0 px-8 py-4`}>

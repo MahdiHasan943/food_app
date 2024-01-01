@@ -111,3 +111,18 @@ animation: fadeInDown 1s ease-in-out  normal none running;
   }
 }
 /* header end */
+
+/* swiper  s*/
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 0.7 !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #FC8A06 !important;
+  opacity: 1 !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+/* swiper e*/

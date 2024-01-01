@@ -36,8 +36,8 @@ module.exports = {
       'laptop': '913px',
       'desktop': '1280px',
       'largeMonitor': '1500px',
-      'largestMonitor': '1900px'
-      
+      'largestMonitor': '1900px',
+      'abovtwosounaids':"2100px"
       
     } 
   },
