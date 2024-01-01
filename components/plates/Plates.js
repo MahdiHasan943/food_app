@@ -20,7 +20,9 @@ const Plates = () => {
       },
     };
   return (
-    <div className='py-20 h-[400px] overflow-hidden w-full px-4 desktop:px-16'>
+      <div className='py-20 h-[400px] overflow-hidden w-full px-4 desktop:px-16'>
+                <h2 className="font-bold text-[22px] tablet:text-[32px] px-4 pb-5 leading-[42px]">Order.uk Popular Categories 🤩</h2>
+
     <Swiper
       ref={swiperRef}
       watchSlidesProgress={true}

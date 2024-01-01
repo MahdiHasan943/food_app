@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { motion} from 'framer-motion'
-import { slideIn,staggerContainer } from './motion';
+import { slideIn,staggerContainer } from '../../front_utils/motion';
 import Image from 'next/image';
 const TopBtn = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +34,7 @@ const TopBtn = () => {
              <motion.div variants={staggerContainer}
              initial="hidden"
              whileInView="show"
-             viewport={{ once: false, amount: 0.25 }}  className="flex  justify-end overflow-hidden fixed  top-[95%] px-3   transition  delay-500  z-[99999!important]  right-[35px] " onClick={goToBtn}>
+             viewport={{ once: false, amount: 0.25 }}  className="flex  justify-end overflow-hidden fixed  top-[90%] px-3   transition  delay-500  z-[99999!important]  right-0 " onClick={goToBtn}>
             <motion.div variants={slideIn('right', 'tween', 0.2, 1)}  className="border bg-[#FC8A06] ml-auto  top-btn  py-3 px-3 rounded-md ">
                 <Image src={'/images/topbtn.png'} alt='arrow' width={20} height={20} />         
 
