@@ -49,7 +49,7 @@ const Header = () => {
           <Link href={'/'}><Image src={'/images/LOGO.png'} width={100} height={100} alt="savor logo" /></Link>
         </div>
         <ul className={`${active} `}>
-        <Link  className="menu_image" href={'/'}><Image  src={'/images/LOGO.png'} width={100} height={100} alt="savor logo" /></Link>
+       <li>  <Link  className="menu_image" href={'/'}><Image  src={'/images/LOGO.png'} width={100} height={100} alt="savor logo" /></Link></li>
           {menu}
    
         </ul>

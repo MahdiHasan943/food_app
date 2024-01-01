@@ -44,7 +44,7 @@ const Exclusive = () => {
       >
         {exclusive.map((content, index) => (
           <SwiperSlide key={index}>
-            <div className="px-3 relative group ">
+            <div className="px-3 relative group overflow-hidden ">
               <Image
                 src={content.img}
                 alt={content.title}
@@ -55,7 +55,7 @@ const Exclusive = () => {
               <p className="absolute top-0 right-[20px] bg-[#000] text-[#fff] px-4 rounded-md py-2">{content.offer}</p>
               <div className={content.id===2? 'absolute bottom-0  duration-200 delay-75 ease-linear  left-0 px-8 py-4':` absolute bottom-[-100px] group-hover:bottom-0  duration-200 delay-75 ease-linear  left-0 px-8 py-4`}>
               <p className="text-[#FC8A06]">{content.title}</p>
-              <h3 className="text-[#fff] text-[22px] leading-[25px] font-semibold">{content.des}</h3>
+              <p className="text-[#fff] text-[22px] leading-[25px] font-semibold">{content.des}</p>
               </div>
             </div>
           </SwiperSlide>

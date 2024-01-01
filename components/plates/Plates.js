@@ -39,8 +39,8 @@ const Plates = () => {
               className=" rounded-lg "
             />
             <div className='max-w-[238px] px-4 py-2 h-[80px] tablet:h-[70px]  rounded-xl rounded-t-none bg-[#03081F]'>
-            <p className="text-[#FC8A06] text-[18px] leading-[20px] font-semibold">{content.title}</p>
-            <h3 className="text-[#fff] ">{content.des}</h3>
+            <h2 className="text-[#FC8A06] text-[18px] leading-[20px] font-semibold">{content.title}</h2>
+            <p className="text-[#fff] ">{content.des}</p>
             </div>
           </div>
         </SwiperSlide>
