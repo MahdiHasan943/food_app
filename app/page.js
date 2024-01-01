@@ -1,7 +1,11 @@
 import Hero from '@/components/Hero/Hero'
 import Exclusive from '@/components/exclusive/Exclusive'
+import Faq from '@/components/faq/Faq'
+import PeoplSays from '@/components/peoplesays/PeoplSays'
 import Plates from '@/components/plates/Plates'
+import Points from '@/components/points/Points'
 import Poplar from '@/components/popular/Poplar'
+import Process from '@/components/process/Process'
 import Image from 'next/image'
 
 export default function Home() {
@@ -15,7 +19,13 @@ export default function Home() {
       {/* categories & others */}
       <section className='max-w-[2400px] mx-auto'>
         <Plates />
-        <Poplar/>
+        <Poplar />
+        <Process/>
+        <PeoplSays/>
+      </section>
+      <section>
+        <Faq/>
+        <Points/>
       </section>
 </main>
   )
