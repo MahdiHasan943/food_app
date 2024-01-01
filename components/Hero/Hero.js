@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="w-full relative bg-[#03081F]  tablet:rounded-xl  max-w-[2100px] mx-auto grid grid-cols-1  laptop:grid-cols-2 items-center gap-4 pt-8 px-4 tablet:px-0 tablet:pl-16 largeMonitor:gap-8 ">
+    <div className="w-full relative bg-[#03081F]  tablet:rounded-xl   grid grid-cols-1  laptop:grid-cols-2 items-center gap-4 pt-8 px-4 tablet:px-0 tablet:pl-16 largeMonitor:gap-8 ">
       <div className="py-16 tablet:py-20">
         <p className="text-[16px]  text-[#fff]">
           Order Restaurant food, takeaway and groceries.

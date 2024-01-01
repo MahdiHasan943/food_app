@@ -53,3 +53,42 @@ export const exclusive = [
     }
     
 ]
+export const plates = [
+ 
+    {
+        "title": "Burgers & Fast food",
+        "des": "21 Restaurants",
+        "img":"/images/plate1.png",
+    }
+    ,
+    {
+        "title": "Breakfast",
+        "des": "4 Restaurants",
+        "img":"/images/plate5.png",
+    },
+    {
+        "title": "Salads",
+        "des": "32 Restaurants",
+        "img":"/images/plate2.png",
+    },
+    {
+        "title": "Pasta & Casuals",
+        "des": "4 Restaurants",
+        "img":"/images/plate3.png",
+    },
+    {
+        "title": "Pizza",
+        "des": "32 Restaurants",
+        "img":"/images/plate4.png",
+    },
+    {
+        "title": "Soups",
+        "des": "32 Restaurants",
+        "img":"/images/plate6.png",
+    },
+    {
+        "title": "Salads",
+        "des": "32 Restaurants",
+        "img":"/images/plate2.png",
+    },
+]
