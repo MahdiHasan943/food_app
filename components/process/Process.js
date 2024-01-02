@@ -13,7 +13,7 @@ const Process = () => {
         alt="processbg"
       />
       <div className="grid px-4 desktop:px-16  grid-cols-1 py-8 desktop:grid-cols-2 gap-8 items-center absolute top-0 left-0 bg-inherit bg-none h-full w-full">
-        <Image src={'/images/process.png'} alt='location' width={600} height={700} className='w-[300px] h-[380px] desktop:w-auto desktop:h-auto mx-auto'/>
+        <Image src={'/images/process.png'} alt='location' width={600} height={700} className='w-[300px] h-[380px] desktop:w-[600px] desktop:h-[700px] mx-auto'/>
         <div className="mx-auto">
           <h2 className='font-bold text-[24px] desktop:text-[40px] text-[#fff]'>
             The Process of Crafting your <br className='hidden desktop:block' /> Dining Experience </h2>
