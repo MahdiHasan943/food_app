@@ -24,8 +24,9 @@ export default function Home() {
         <PeoplSays/>
       </section>
       <section>
-        <Faq/>
-        <Points/>
+        <Faq />
+        
+        {/* <Points/> */}
       </section>
 </main>
   )
