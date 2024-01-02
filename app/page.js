@@ -17,7 +17,7 @@ export default function Home() {
         <Exclusive/>
       </section>
       {/* categories & others */}
-      <section className='max-w-[2400px] mx-auto'>
+      <section className='max-w-[2400px]  mx-auto'>
         <Plates />
         <Poplar />
         <Process/>
