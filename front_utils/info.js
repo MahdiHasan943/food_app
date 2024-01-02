@@ -117,3 +117,45 @@ export const logos = [
         "image":"/images/popular6.png"
     }
 ]
+
+export const customerSay = [
+    {
+        "id": 1,
+        "title": "Restaurant",
+        "offer": "-40%",
+        "name":"Elizabeth",
+        "des": "An absolute foodie's paradise! The flavors at ReservQ are a symphony of delight. Every bite tells a story of passion and skill. A must-visit for anyone seeking beyond compare.",
+        "img": "/images/customer-icon.png",
+        "profile":"/images/customerP.png"    },
+    {
+        "id": 2,
+        "title": "Restaurant",
+        "offer": "-17%",
+        "name":"Emily R.",
+
+        "des": "An absolute foodie's paradise! The flavors at ReservQ are a symphony of delight. Every bite tells a story of passion and skill. A must-visit for anyone seeking beyond compare." ,
+        "img": "/images/customer-icon.png",
+        "profile":"/images/customerP.png"    },
+    {
+        "id": 3,
+        "title": "Restaurant",
+        "offer": "-20%",
+        "name":"Dorothy",
+
+        "des": "An absolute foodie's paradise! The flavors at ReservQ are a symphony of delight. Every bite tells a story of passion and skill. A must-visit for anyone seeking beyond compare."
+        ,
+        "img": "/images/customer-icon.png",
+        "profile":"/images/customerP.png"    },
+    {
+        "id": 4,
+        "title": "Restaurant",
+        "offer": "-40%",
+        "name":"Amelia",
+
+        "des": "An absolute foodie's paradise! The flavors at ReservQ are a symphony of delight. Every bite tells a story of passion and skill. A must-visit for anyone seeking beyond compare.",
+        "img": "/images/customer-icon.png",
+        "profile": "/images/customerP.png"
+        
+    }
+    
+]
