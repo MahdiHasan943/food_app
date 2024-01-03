@@ -15,7 +15,7 @@ const Faq = () => {
         <Disclosure>
           <Disclosure.Button
             onClick={() => setOpen(!open)}
-            className="bg-[#fff] text-start relative shadow-md px-4 w-[300px] desktop:w-[450px] rounded-sm py-4"
+            className="bg-[#fff] text-start relative shadow-md px-4 w-full desktop:w-[450px] rounded-sm py-4"
           >
             What type of cuisine does your restaurant offer?
             <Image
@@ -37,7 +37,7 @@ const Faq = () => {
         <Disclosure>
           <Disclosure.Button
             onClick={() => setOpen(!open)}
-            className="bg-[#fff] relative text-start shadow-md px-4 w-[300px] desktop:w-[450px] rounded-sm py-4"
+            className="bg-[#fff] relative text-start shadow-md px-4 w-full desktop:w-[450px] rounded-sm py-4"
           >
 Can I make a reservation online?
             <Image
@@ -58,7 +58,7 @@ Can I make a reservation online?
         <Disclosure>
           <Disclosure.Button
             onClick={() => setOpen(!open)}
-            className="bg-[#fff] text-start relative shadow-md px-4 w-[300px] desktop:w-[450px] rounded-sm py-4"
+            className="bg-[#fff] text-start relative shadow-md px-4 w-full desktop:w-[450px] rounded-sm py-4"
           >
 Is there a dress code for dining at your restaurant?            <Image
               src={open ? "/images/fag_arrowtoop.png" : "/images/fag_arrow.png"}
@@ -78,7 +78,7 @@ Is there a dress code for dining at your restaurant?            <Image
         <Disclosure>
           <Disclosure.Button
             onClick={() => setOpen(!open)}
-            className="bg-[#fff] text-start relative shadow-md px-4 w-[300px] desktop:w-[450px] rounded-sm py-4"
+            className="bg-[#fff] text-start relative shadow-md px-4 w-full desktop:w-[450px] rounded-sm py-4"
           >
 Is there a dress code for dining at your restaurant?            <Image
               src={open ? "/images/fag_arrowtoop.png" : "/images/fag_arrow.png"}
@@ -96,14 +96,14 @@ Is there a dress code for dining at your restaurant?            <Image
       </div>
       </div>
       <div className="mx-auto">
-        <div className="tablet:flex   gap-4">
-          <Image src={'/images/eventDining.png'} alt="diningroom" width={400} height={400} className=" rounded-md"/>
-          <Image src={'/images/eventblack.png'} alt="diningroom" width={250} height={300} className="mt-4 tablet:mt-0 mx-auto rounded-md"/>
+        <div className="flex  overflow-hidden   gap-4">
+          <Image src={'/images/eventDining.png'} alt="diningroom" width={200} height={400} className="desktop:w-[280px] rounded-md"/>
+          <Image src={'/images/eventblack.png'} alt="diningroom" width={100} height={135} className="desktop:w-[180px] tablet:mt-0 mx-auto rounded-md"/>
 
         </div>
-        <div className="tablet:flex pt-4   gap-4">
-          <Image src={'/images/eventred.png'} alt="diningroom" width={300} height={300} className="mx-auto rounded-md"/>
-          <Image src={'/images/eventDining4.png'} alt="diningroom" width={350} height={300} className="mt-4 tablet:mt-0 rounded-md"/>
+        <div className="flex pt-4 overflow-hidden  gap-4">
+          <Image src={'/images/eventred.png'} alt="diningroom" width={150} height={300} className="desktop:w-[210px] mx-auto rounded-md"/>
+          <Image src={'/images/eventDining4.png'} alt="diningroom" width={150} height={300} className="desktop:w-[250px] tablet:mt-0 rounded-md"/>
 
         </div>
 
