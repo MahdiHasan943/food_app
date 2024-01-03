@@ -97,13 +97,13 @@ Is there a dress code for dining at your restaurant?            <Image
       </div>
       <div className="mx-auto">
         <div className="flex  overflow-hidden   gap-4">
-          <Image src={'/images/eventDining.png'} alt="diningroom" width={200} height={400} className="desktop:w-[280px] rounded-md"/>
-          <Image src={'/images/eventblack.png'} alt="diningroom" width={100} height={135} className="desktop:w-[180px] tablet:mt-0 mx-auto rounded-md"/>
+          <Image src={'/images/eventDining.png'} alt="diningroom" width={200} height={400} className="transform scale-100 hover:scale-110 transition-transform duration-500 desktop:w-[280px] rounded-md"/>
+          <Image src={'/images/eventblack.png'} alt="diningroom" width={100} height={135} className="transform scale-100 hover:scale-110 transition-transform duration-500 desktop:w-[180px] tablet:mt-0 mx-auto rounded-md"/>
 
         </div>
         <div className="flex pt-4 overflow-hidden  gap-4">
-          <Image src={'/images/eventred.png'} alt="diningroom" width={150} height={300} className="desktop:w-[210px] mx-auto rounded-md"/>
-          <Image src={'/images/eventDining4.png'} alt="diningroom" width={150} height={300} className="desktop:w-[250px] tablet:mt-0 rounded-md"/>
+          <Image src={'/images/eventred.png'} alt="diningroom" width={150} height={300} className="transform scale-100 hover:scale-110 transition-transform duration-500 desktop:w-[210px] mx-auto rounded-md"/>
+          <Image src={'/images/eventDining4.png'} alt="diningroom" width={150} height={300} className="transform  scale-100 hover:scale-110 transition-transform duration-500 desktop:w-[250px] tablet:mt-0 rounded-md"/>
 
         </div>
 
