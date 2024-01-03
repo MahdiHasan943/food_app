@@ -1,12 +1,12 @@
 import { logos } from '@/front_utils/info'
 import Image from 'next/image'
 import React from 'react'
+import Title from '../reusableComponent/Title'
 const Poplar = () => {
     
   return (
       <div className=' px-4 desktop:px-16 py-20'>
-                          <h2 className="font-bold text-[22px] tablet:text-[32px] px-4 pb-5 leading-[42px]">Popular Restaurants</h2>
-
+<Title text="Popular Restaurants" />
           <div className="grid grid-cols-2 tablet:grid-cols-3 desktop:grid-cols-6 gap-4">
           {
               logos.map((logo, index) => (

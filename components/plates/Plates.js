@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { plates } from "@/front_utils/info";
 import Image from "next/image";
+import Title from "../reusableComponent/Title";
 const Plates = () => {
     const swiperRef = useRef(null);
 
@@ -21,8 +22,7 @@ const Plates = () => {
     };
   return (
       <div className='py-20 h-[400px] overflow-hidden w-full px-4 desktop:px-16'>
-                <h2 className="font-bold text-[22px] tablet:text-[32px] px-4 pb-5 leading-[42px]">Order.uk Popular Categories 🤩</h2>
-
+<Title text="Order.uk Popular Categories 🤩" />
     <Swiper
       ref={swiperRef}
       watchSlidesProgress={true}

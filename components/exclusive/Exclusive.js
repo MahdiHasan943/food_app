@@ -10,6 +10,7 @@ import { Pagination } from 'swiper/modules';
 
 import { exclusive } from "@/front_utils/info";
 import Image from "next/image";
+import Title from "../reusableComponent/Title";
 
 const Exclusive = () => {
   const swiperRef = useRef(null);
@@ -29,7 +30,7 @@ const Exclusive = () => {
 
   return (
     <div className='pt-20 h-[400px] overflow-hidden w-full px-4 desktop:px-16'>
-      <h2 className="font-bold text-[22px] tablet:text-[32px] px-4 pb-5 leading-[32px]">Up to -40% 🎊 Order.uk exclusive deals</h2>
+      <Title text="Up to -40% 🎊 Order.uk exclusive deals" />
       <Swiper
         ref={swiperRef}
         watchSlidesProgress={true}
