@@ -1,18 +1,18 @@
 export const navlinks = [
     {
-         "id":1,
+        "id":1,
         "title": "Browse Menu ",
          "href":"menu"
     },
     {
         "id":2,
-       "title": "Category",
-        "href":"category"
+       "title": "All Items",
+        "href":"all-items"
     },
     {
         "id":3,
        "title": "Blog",
-        "href":"blog"
+        "href":"blogs"
     }
     ,
     {

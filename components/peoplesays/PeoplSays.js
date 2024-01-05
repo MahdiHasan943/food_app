@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { customerSay } from "@/front_utils/info";
 import Image from "next/image";
+import Title from "../reusableComponent/Title";
 
 const PeoplSays = () => {
   const swiperRef = useRef(null);
@@ -21,9 +22,7 @@ const PeoplSays = () => {
   };
   return (
     <div className=" px-4 desktop:px-16 py-20">
-      <h2 className="font-bold text-[22px] tablet:text-[32px] px-4 pb-5 leading-[42px]">
-        What’s Our Customer Say
-      </h2>
+     <Title text="        What’s Our Customer Say"/>
 
       <Swiper
         ref={swiperRef}

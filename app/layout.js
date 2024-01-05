@@ -16,11 +16,14 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  console.log(children,"layout");
   return (
     <html lang="en">
       <body className={`${lato.className} scroll-smooth `}>
-        <Header/>
+        <Header />
+        <main> 
         {children}
+        </main>
         <Footer />
         <TopBtn/>
 
