@@ -2,7 +2,8 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { motion } from 'framer-motion'
+import { textVariant2 } from "@/front_utils/motion";
 // Import Swiper styles
 import "swiper/css";
 import 'swiper/css/pagination';
@@ -55,10 +56,10 @@ const Exclusive = () => {
                 className=" rounded-lg transform mx-auto scale-100 hover:scale-110 transition-transform duration-500 largestMonitor:w-[600px] "
               />
               <p className="absolute top-0 right-[20px] bg-[#000] text-[#fff] px-4 rounded-md py-2">{content.offer}</p>
-              <div className={content.id===2? 'absolute bottom-0 largestMonitor:bottom-[60px] abovtwosounaids:bottom-[100px] duration-200 delay-75 ease-linear  left-0 px-8 py-4':` absolute bottom-[-100px] group-hover:bottom-0 largestMonitor:group-hover:bottom-[60px] abovtwosounaids:group-hover:bottom-[100px]   duration-200 delay-75 ease-linear  left-0 px-8 py-4`}>
+              <motion.div variants={textVariant2} initial="hidden" whileInView="show" className='absolute bottom-0 largestMonitor:bottom-[60px] abovtwosounaids:bottom-[100px] duration-200 delay-75 ease-linear  left-0 px-8 py-4'>
               <p className="text-[#FC8A06]">{content.title}</p>
               <p className="text-[#fff] text-[22px] leading-[25px] font-semibold">{content.des}</p>
-              </div>
+              </motion.div>
             </div>
           </SwiperSlide>
         ))}

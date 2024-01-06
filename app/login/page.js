@@ -1,8 +1,9 @@
+import Signin from '@/components/Auth/SignIn'
 import React from 'react'
 
-const page = () => {
+const page = ({ searchParams: { callbackUrl } })=> {
   return (
-    <div className='h-[600px]'>page</div>
+    <Signin callbackUrl={callbackUrl || '/'} />
   )
 }
 
