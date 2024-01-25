@@ -51,7 +51,7 @@ const Signin = ({ callbackUrl }) => {
           <button
             className="w-full six:w-[567px] lg:w-full xl:w-[567px]"
             title="login with google"
-            onClick={() => signIn("google", { callbackUrl})}
+            onClick={() => signIn("google", { callbackUrl:'/'})}
           >
             <Image
                           className="mt-3 h-[58px] w-full six:w-[567px] lg:w-full xl:w-[567px]"
@@ -95,7 +95,7 @@ const Signin = ({ callbackUrl }) => {
                        <label 
                                   onClick={() => setShowPassword(!showPassword)}
                                   className="absolute top-3 right-3 rounded px-2 py-1 "
-                                  htmlForfor="toggle"
+                                  htmlforfor="toggle"
                                 >
                                   {showPassword ? <Image width={20} height={20} className="" src="/images/hidee.png" alt="eye" /> :<Image className="" width={20} height={20} src="/images/visible.png" alt="eye" /> } 
                                 </label>

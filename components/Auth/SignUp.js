@@ -7,35 +7,24 @@ import Form from "../reusableComponent/Form";
 import Button from "../reusableComponent/Button";
 import Image from "next/image";
 import Title from "../reusableComponent/Title";
+import { SignUpCredentials } from "@/actions/authActions";
 
 const Signup = ({ callbackUrl }) => {
   const [showPassword, setShowPassword] = useState(false);
 
-  async function handleCredentialLogin(formData) {
+  async function handleSignUpCredentials(formData) {
+
+    const name = formData.get("name");
     const email = formData.get("email");
     const password = formData.get("password");
-    console.log(email, password);
-    await signIn("credentials", { email, password ,callbackUrl});
-    toast.custom((t) => (
-      <div
-        className={`${
-          t.visible ? 'animate-enter' : 'animate-leave'
-        } max-w-md w-full mt-[100px] bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
-      >
-        <div className="flex-1 w-0 p-4">
-          <p className="text-green-500      text-2xl">       SuccessFully Login
-</p>
-        </div>
-        <div className="flex border-l border-gray-200">
-          <button
-            onClick={() => toast.dismiss(t.id)}
-            className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          >
-            Close
-          </button>
-        </div>
-      </div>
-    ))
+    console.log(name, email, password);
+
+    const res = await SignUpCredentials({ name, email, password })
+    if (res?.msg) alert(res?.msg)
+   
+    // redirect('/signin')
+
+
   }
 
   return (
@@ -74,7 +63,7 @@ const Signup = ({ callbackUrl }) => {
             />
           </button>
           <Image className="my-6" src="/images/divider.png" width={600} height={2} alt="divider" />
-          <Form action={handleCredentialLogin} className="  flex-cols">
+          <Form action={handleSignUpCredentials} className="  flex-cols">
           <div className="">
               <p className="font-lato tracking-wide font-normal  my-3	">
                 User Name{" "}
@@ -107,7 +96,7 @@ const Signup = ({ callbackUrl }) => {
                        <label 
                                   onClick={() => setShowPassword(!showPassword)}
                                   className="absolute top-3 right-3 rounded px-2 py-1 "
-                                  htmlForfor="toggle"
+                                  htmlforfor="toggle"
                                 >
                                   {showPassword ? <Image width={20} height={20} className="" src="/images/hidee.png" alt="eye" /> :<Image className="" width={20} height={20} src="/images/visible.png" alt="eye" /> } 
                                 </label>
@@ -127,7 +116,7 @@ const Signup = ({ callbackUrl }) => {
 
             <br />
                       <div className="mt-[-20px]">
-                      <Button value="Sign In" />
+                      <Button value="Sign Up" />
             <p className="   tracking-wide font-normal  my-3	">
             Already have an account?{" "}
               <Link href={"/login"} className="underline underline-offset-4">

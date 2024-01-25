@@ -1,9 +1,17 @@
-import React from 'react'
+import { signOut } from 'next-auth/react';
+import React from 'react';
 
-const SignOut = () => {
+const SignOut = ({ className }) => {
   return (
-    <div>SignOut</div>
-  )
-}
+    <div>
+      <button
+        className={className}
+        onClick={() => signOut()}
+      >
+        Sign Out
+      </button>
+    </div>
+  );
+};
 
-export default SignOut
+export default SignOut;

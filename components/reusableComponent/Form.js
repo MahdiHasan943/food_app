@@ -7,7 +7,8 @@ const Form = ({action,...props}) => {
         formRef.current.reset();
 
 }
-  return (
+        return (
+        
           <form {...props} ref={formRef}  action={handleAction}/>  
   )
 }

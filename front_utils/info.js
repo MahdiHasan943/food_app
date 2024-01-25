@@ -22,6 +22,24 @@ export const navlinks = [
    }
 ]
 
+export const profilelink = [
+    {
+        "id":1,
+        "title": "My orders",
+         "href":"orders"
+    },
+    {
+        "id":2,
+       "title": "Wishlist",
+        "href":"Wishlist"
+    },
+    {
+        "id":3,
+       "title": " My info",
+        "href":"profile/client"
+    }
+]
+
 export const exclusive = [
     {
         "id": 1,

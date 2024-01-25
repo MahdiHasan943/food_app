@@ -3,6 +3,7 @@ import './globals.css'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
 import TopBtn from '@/components/GotoTop/GotoTop'
+import Provider from '@/context/provider'
 
 const lato = Lato({
   weight: '400',
@@ -20,11 +21,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${lato.className} scroll-smooth `}>
+        <Provider>
         <Header />
+
         <main> 
-        {children}
-        </main>
-        <Footer />
+            {children}
+          </main>
+          <Footer />
+
+            </Provider>
         <TopBtn/>
 
       </body>
