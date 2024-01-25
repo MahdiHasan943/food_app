@@ -12,7 +12,7 @@ let isConnected = false; // track the connection
   }
 
   try {
-    await mongoose.connect(process.env.Rdd, {
+    await mongoose.connect(process.env.MONGODB_URI, {
       dbName: "food_app",
       useNewUrlParser: true,
       useUnifiedTopology: true,
