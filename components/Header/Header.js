@@ -160,28 +160,42 @@ const Header = () => {
           {menu}
         </ul>
         <div className="tablet:hidden flex items-center gap-2">
-          {log ? (
-            <Link href={"/login"}>
-              <button
-                className={
-                  stickyClass
-                    ? ` text-[#010101] bg-[#fff] py-5 px-8 tablet:px-14 rounded-full   ${
-                        navActive === "/login"
-                          ? "border border-[#fff] py-3 px-8 rounded-md"
-                          : ""
-                      }`
-                    : `${
-                        navActive === "/login"
-                          ? "bg-[#FC8A06] border border-[#fff] tablet:border-0  py-3 px-8 rounded-md text-[#fff]"
-                          : " py-5 px-8 tablet:px-14 rounded-full leading-[20px] text-[#fff]  bg-[#FC8A06]  "
-                      } px-8  `
-                }
-              >
-                Sign In
-              </button>
-            </Link>
+          {session  ? (
+          <Image
+          onClick={() => {
+            setToggle(!toggle);
+            // navToggle()
+          }}
+          className="rounded-full"
+          src={
+            session?.user?.image
+              ? session?.user?.image
+              : "/images/hsecondImage1.png"
+          }
+          alt="profile"
+          width={45}
+          height={45}
+        />
           ) : (
-            ""
+            <Link href={"/login"}>
+            <button
+              className={
+                stickyClass
+                  ? ` text-[#010101] bg-[#fff] py-5 px-8 tablet:px-14 rounded-full   ${
+                      navActive === "/login"
+                        ? "border border-[#fff] py-3 px-8 rounded-md"
+                        : ""
+                    }`
+                  : `${
+                      navActive === "/login"
+                        ? "bg-[#FC8A06] border border-[#fff] tablet:border-0  py-3 px-8 rounded-md text-[#fff]"
+                        : " py-5 px-8 tablet:px-14 rounded-full leading-[20px] text-[#fff]  bg-[#FC8A06]  "
+                    } px-8  `
+              }
+            >
+              Sign In
+            </button>
+          </Link>
           )}
           <Link href={"/addTocart"}>
             <Image
