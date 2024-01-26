@@ -240,9 +240,18 @@ const Header = () => {
                   <Link href={`/${pro?.href}`}> {pro.title} </Link>
               
               </li>))
-               }
-
-            <div className="flex items-center  gap-4">
+            }
+            {
+              session?.user?.role === "admin" ? (
+                <li onClick={() => {
+                  setToggle(!toggle);
+                  setColor('dashboard')
+                }}  className={`${
+                  color === 'dashboard' ? "text-[#FF413D] " : "text-white "
+                } font-lato flex items-center gap-4`}><Link href={'/dashboard'}>Dashboard</Link></li>
+              ):''
+            }
+            <li className="flex items-center  gap-4">
               <SignOut
                 className={
                   stickyClass
@@ -258,7 +267,7 @@ const Header = () => {
                       } px-8  `
                 }
               />
-            </div>
+            </li>
           </ul>
         </div>
       </div>

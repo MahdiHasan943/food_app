@@ -28,11 +28,11 @@ export const profilelink = [
         "title": "My orders",
          "href":"orders"
     },
-    {
-        "id":2,
-       "title": "Wishlist",
-        "href":"Wishlist"
-    },
+    // {
+    //     "id":2,
+    //    "title": "Wishlist",
+    //     "href":"Wishlist"
+    // },
     {
         "id":3,
        "title": " My info",
