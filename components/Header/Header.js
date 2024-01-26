@@ -61,6 +61,7 @@ const Header = () => {
       ))}
       <li>
         <Link
+          className=""
           onClick={() => {
             navToggle();
           }}
@@ -78,7 +79,7 @@ const Header = () => {
       </li>
       {session ? (
         <>
-          <li>
+          <li className="hidden tablet:block">
             <Image
               onClick={() => {
                 setToggle(!toggle);
@@ -229,9 +230,7 @@ const Header = () => {
                 <li
                   key={pro.id}
                   onClick={() => {
-                  setToggle(!toggle);
-                  navToggle();
-  
+                  setToggle(!toggle);  
                   setColor(pro.href);
                 }}
                 className={`${

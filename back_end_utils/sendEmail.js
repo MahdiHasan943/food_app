@@ -16,7 +16,7 @@ const sendEmail = async ({to,url,text}) => {
     const mailOptions  = {
         from: process.env.EMAIL_USER,
         to,
-        subject: 'lilyanEjames',
+        subject: 'Food App',
         html:html({url,text})
         
     }

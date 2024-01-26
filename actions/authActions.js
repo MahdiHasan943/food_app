@@ -80,85 +80,85 @@ export async function verifyCredentials(token) {
 
 
 
-// export async function changePasswordCredentials({old_pass,new_pass}) {
+export async function changePasswordCredentials({old_pass,new_pass}) {
     
-//     try {
-//         const session = await getServerSession(authOpions);
-//         if (!session) throw new Error('Unauthorize!');
-//         if (session?.user?.provider !=='credentials') { 
-//             throw new Error(`This account is signed in with ${session?.user?.provider}. You can't use this function`)
-//         }
+    try {
+        const session = await getServerSession(authOptions);
+        if (!session) throw new Error('Unauthorize!');
+        if (session?.user?.provider !=='credentials') { 
+            throw new Error(`This account is signed in with ${session?.user?.provider}. You can't use this function`)
+        }
     
 
-//         const user = await User.findById(session?.user?._id);
-//         if (!user) throw new Error("User does not exist");
-//         const compare = await bcrypt.compare(old_pass, user.password);
-//         if (!compare) throw new Error('Old password does not match');
-//         const newPass = await bcrypt.hash(new_pass, 12);
+        const user = await User.findById(session?.user?._id);
+        if (!user) throw new Error("User does not exist");
+        const compare = await bcrypt.compare(old_pass, user.password);
+        if (!compare) throw new Error('Old password does not match');
+        const newPass = await bcrypt.hash(new_pass, 12);
 
-//         await User.findByIdAndUpdate(user._id, {password: newPass});
+        await User.findByIdAndUpdate(user._id, {password: newPass});
 
 
         
        
-//         return { msg: 'Password Changed success' };
+        return { msg: 'Password Changed success' };
      
-//     }
-//   catch (error) {
-//       console.log(error);
-//       redirect(`/error?error=${error.message}`)
+    }
+  catch (error) {
+      console.log(error);
+      redirect(`/error?error=${error.message}`)
       
-//   }
+  }
   
-// }
+}
 
 
 // forget password
-// export async function forgetPasswordCredentials({email}) {
+export async function forgetPasswordCredentials({email}) {
     
-//     try {
+    try {
      
        
-//         const user = await User.findOne({email});
-//         if (!user) throw new Error("Email does not exist");
+        const user = await User.findOne({email});
+        if (!user) throw new Error("Email does not exist");
 
-//         if (user?.provider !=='credentials') { 
-//             throw new Error(`This account is signed in with ${user?.provider}. You can't use this function`)
-//         }
-//         const token=generateToken({userId: user._id})
+        if (user?.provider !=='credentials') { 
+            throw new Error(`This account is signed in with ${user?.provider}. You can't use this function`)
+        }
+        const token=generateToken({userId: user._id})
         
-//         await sendEmail({
-//             to: email,
-//             url: `${BASE_URL}/reset_password?token=${token}`,
-//             text:'Reset Password'
-//         })
-//         return { msg: ' success| check your email to reset password' };
+        await sendEmail({
+            to: email,
+            url: `${BASE_URL}/reset_password?token=${token}`,
+            text:'Reset Password'
+        })
+        return { msg: ' success| check your email to reset password' };
      
-//     }
-//   catch (error) {
-//       console.log(error);
-//       redirect(`/error?error=${error.message}`)
+    }
+  catch (error) {
+      console.log(error);
+      redirect(`/error?error=${error.message}`)
       
-//   }
+  }
   
-// }
+}
 
 // reset_passwod
-// export async function resetPasswordCredentials({token,password}) {
+export async function resetPasswordCredentials({token,password}) {
     
-//     try {
-//         const {userId} = varifyToken(token);
-//         const newPass = await bcrypt.hash(password, 12);
-//         await User.findByIdAndUpdate(userId,{ password: newPass });
+    try {
+        const {userId} = varifyToken(token);
+        const newPass = await bcrypt.hash(password, 12);
+        await User.findByIdAndUpdate(userId,{ password: newPass });
 
        
-//         return { msg: ' success| your password has been reset' };
+        return { msg: ' success| your password has been reset' };
      
-//     }
-//   catch (error) {
-//       console.log(error);
-//       redirect(`/error?error=${error.message}`)
+    }
+  catch (error) {
+      console.log(error);
+      redirect(`/error?error=${error.message}`)
       
-//   }
+  }
   
-// }
+}
